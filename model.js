@@ -1,5 +1,15 @@
 let appDiv = document.getElementById("app");
 
-let selectedCity = "Oslo, Norway";
-let time = "13:52";
-let date = new Date();
+let timeModel = {
+  date: new Date(),
+  selectedCity: "Oslo, Norway",
+  time: "",
+  countries: {
+    Norway: 2,
+    Sweden: 2,
+    Denmark: 2,
+    Germany: 2,
+    UnitedKingdom: 1,
+    Netherlands: 1,
+  },
+};

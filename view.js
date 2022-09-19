@@ -24,13 +24,14 @@ function showTime() {
         <div class="btn"></div>
     </div>
     <div class="mainContainer">
-        <input type="text" placeholder="City to display time">
+        <input onchange="timeModel.selectedCity = this.value; getTime()" type="text" placeholder="City to display time">
         <div class="timeContainer">
-            <img src="${time > 18 ? "Night.png" : "Day.png"}" alt="${
-    time > 18 ? "Night" : "Day"
+            <img src="${timeModel.time > 18 ? "night.svg" : "day.svg"}" alt="${
+    timeModel.time > 18 ? "Night" : "Day"
   }"/>
-            <h3>${selectedCity}</h3>
-            <h4>${time}</h4>
+            <h3>${timeModel.selectedCity}</h3>
+            <h2>${timeModel.time}</h3>
+            <h4>TIMEZONE</h4>
         </div>
     </div>
     
